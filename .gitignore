@@ -1,0 +1,13 @@
+**/bin/
+**/obj/
+.runtime/
+.vs/
+*.user
+*.suo
+.env
+.env.*
+*.db
+*.db-*
+*.log
+**/appsettings.*.local.json
+__pycache__/
