@@ -1,0 +1,16 @@
+# Run the demo first. In VS Code with REST Client: send login, then the dashboard request.
+@base = http://localhost:5022
+
+### Service health
+GET {{base}}/health
+
+### Sign in with fictional classroom credentials
+# @name login
+POST {{base}}/api/supplierauth/login
+Content-Type: application/json
+
+{ "email":"supplier@agri.test", "password":"FieldDemo-26" }
+
+### Read this account's dashboard
+GET {{base}}/api/supplierdashboard
+Authorization: Bearer {{login.response.body.$.token}}
